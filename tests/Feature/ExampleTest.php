@@ -12,11 +12,19 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    /*public function test_example()
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
+    }*/
+
+    public function testDatabase()
+    {
+        $this->assertDatabaseHas('pegawai', [
+            'pegawai_nama' => 'Budi'
+        ]);
     }
+
 
 }
